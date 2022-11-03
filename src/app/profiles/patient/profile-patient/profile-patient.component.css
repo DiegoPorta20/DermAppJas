@@ -1,0 +1,31 @@
+.profile{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  height: 65vh;
+}
+.profile-section1, .profile-section2{
+  display: flex;
+  justify-content: center;
+}
+.profile-section2{
+  flex-direction: column;
+  text-align: center;
+}
+.profile-section2 h2{
+  font-size: 25px;
+  font-weight: 400;
+}
+.name-btnEditP{
+  text-align: center;
+  padding-top: 15px;
+}
+.name-btnEditP h1{
+  font-size: 35px;
+}
+.name-btnEditP button{
+  width: 150px;
+  margin: 15px 0;
+}

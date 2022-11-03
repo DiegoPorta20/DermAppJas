@@ -1,0 +1,48 @@
+.editProfile{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  align-items: center;
+  height: 70vh;
+}
+.edit-profile-section1{
+  text-align: center;
+}
+.edit-profile-section1 h1{
+  font-size: 30px;
+}
+.edit-profile-section1 img{
+  margin: auto;
+  padding: 15px 0;
+}
+.edit-profile-section1 button{
+  width: 150px;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  font-size: 17px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: .6s;
+}
+.edit-profile-section1 button:hover{
+  background: #dacbc2;
+}
+mat-checkbox{
+  margin:0 10px 10px 20px;
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+.btn{
+  display: flex;
+  justify-content: center;
+}
+.btn button{
+  background: #dacbc2;
+}

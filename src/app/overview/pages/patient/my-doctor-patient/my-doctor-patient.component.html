@@ -1,0 +1,28 @@
+<section>
+  <div *ngIf="this.selectDermatologist">
+    <div class="name-btnEditP">
+      <h1>{{this.dermatologist?.name}} {{this.dermatologist?.lastName}}</h1>
+    </div>
+    <div class="profile">
+      <div class="profile-section1">
+        <img src="{{this.dermatologist?.urlImage}}"  alt="User profile photo" width="400px" />
+      </div>
+      <div class="profile-section2">
+        <h2>Age: {{this.patient?.age}}</h2>
+        <h2>Address: {{this.dermatologist?.address}}</h2>
+        <h2>Email: {{this.dermatologist?.email}}</h2>
+      </div>
+    </div>
+  </div>
+  <div class="selected" *ngIf="!this.selectDermatologist">
+    <h1>SELECT THE DERMATOLOGIST OF YOUR CHOICE</h1>
+    <div class="doctors">
+      <div class="content-doctors" *ngFor="let item of this.dermatologists">
+        <img src="{{item.urlImage}}" alt="">
+        <h2>{{item.name}} {{item.lastName}}</h2>
+        <h2>{{item.age}} years old</h2>
+        <button (click)="updatePatient(item.id)">Select</button>
+      </div>
+    </div>
+  </div>
+</section>

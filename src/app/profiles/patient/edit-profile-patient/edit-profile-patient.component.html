@@ -1,0 +1,41 @@
+<div class="editProfile">
+  <div class="edit-profile-section1">
+    <img src="{{this.patient?.urlImage}}" alt="User profile photo" width="350px"/>
+    <div class="btn">
+      <button mat-raised-button>Insert image</button>
+    </div>
+
+  </div>
+  <div class="edit-profile-section2">
+    <form class="example-form" #formUpdate='ngForm'>
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput name="name" value="{{this.patient?.name}}" placeholder="Ex. Leonardo" [(ngModel)]="patient!.name">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Last Name</mat-label>
+        <input matInput name="lastName" value="{{this.patient?.lastName}}" placeholder="Ex. 36" [(ngModel)]="patient!.lastName">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Age</mat-label>
+        <input matInput name="Age" value="{{this.patient?.age}}" placeholder="Ex. 36" [(ngModel)]="patient!.age">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Address</mat-label>
+        <input matInput name="address" value="{{this.patient?.address}}" placeholder="Ex. Lima" [(ngModel)]="patient!.address">
+      </mat-form-field><mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Url Image</mat-label>
+      <input matInput name="urlImage" value="{{this.patient?.urlImage}}" placeholder="Ex. Lima" [(ngModel)]="patient!.urlImage">
+    </mat-form-field>
+    </form>
+
+    <div class="btn">
+      <button mat-raised-button (click)="updatePatient()">Save Changes</button>
+    </div>
+
+
+  </div>
+
+</div>

@@ -1,0 +1,53 @@
+<div class="content" >
+
+
+  <form class="content1">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Profile</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image width="50px"  [src]="preview" alt="">
+      <label >Filename : {{dataimage1}}</label>
+      <mat-card-actions>
+        <input  mat-button (change)="capture_file($event)" type="file">
+        <button mat-button (click)="Uploadfile()">Upload file</button>
+      </mat-card-actions>
+    </mat-card>
+  </form>
+  <form class="content2" #formTemplate='ngForm'>
+    <h1> Complete your data: </h1>
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput name="name" type="text" [(ngModel)]="dataDermatologist!.name" required placeholder="Name">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>LastName</mat-label>
+      <input matInput name="lastName" type="text" [(ngModel)]="dataDermatologist!.lastName" required placeholder="LastName">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Age</mat-label>
+      <input matInput name="age" type="text" [(ngModel)]="dataDermatologist!.age" required placeholder="Age">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Address</mat-label>
+      <input matInput name="address" type="text" [(ngModel)]="dataDermatologist!.address" required placeholder="Address">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput name="email" type="text" [(ngModel)]="dataDermatologist!.email" required placeholder="Email">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Enter your password</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'" required name="password" [(ngModel)]="dataDermatologist!.password">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+    <button mat-button mat-raised-button color="warn" (click)="register(formTemplate)">Register</button>
+  </form>
+</div>

@@ -1,0 +1,35 @@
+<mat-grid-list cols="2" rowHeight="100%">
+  <mat-grid-tile >
+    <img src="../../../../assets/dermatologist-login.jpg" alt="Dermatologist watching patient history">
+
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <form class="login-form" #formTemplate='ngForm'>
+      <h1>LOG IN</h1>
+
+      <div class="login-form1">
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput name="email" placeholder="Email" [(ngModel)]="dataDermatologist!.email" required>
+          </mat-form-field>
+        </p>
+      </div>
+
+      <div class="login-form2">
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput name="password" placeholder="Password" [(ngModel)]="dataDermatologist!.password" required>
+          </mat-form-field>
+        </p>
+      </div>
+      <div class="buttons">
+        <button mat-button (click)="Login(formTemplate)" mat-flat-button color="primary">LOG IN</button>
+        <button mat-button [routerLink]="'/sign-in-dermatologist'" mat-raised-button color="primary" >Register</button>
+      </div>
+    </form>
+  </mat-grid-tile>
+
+</mat-grid-list>
+

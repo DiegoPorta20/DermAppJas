@@ -1,0 +1,18 @@
+<section>
+  <div class="name-btnEditP">
+    <h1>{{this.dermatologist?.name}} {{this.dermatologist?.lastName}}</h1>
+    <button mat-raised-button routerLink="/edit-profile">Edit Profile</button>
+  </div>
+  <div class="profile">
+    <div class="profile-section1">
+      <img src="{{this.dermatologist?.urlImage}}"  alt="User profile photo" width="400px" />
+    </div>
+    <div class="profile-section2">
+      <h2>Age: {{this.dermatologist?.age}}</h2>
+      <h2>Address: {{this.dermatologist?.address}}</h2>
+      <h2>Email: {{this.dermatologist?.email}}</h2>
+      <h2>Age: {{this.dermatologist?.age}}</h2>
+    </div>
+  </div>
+
+</section>
